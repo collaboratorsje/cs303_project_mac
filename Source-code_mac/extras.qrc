@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>detective_magnifying_glass1.jpg</file>
+    </qresource>
+</RCC>
