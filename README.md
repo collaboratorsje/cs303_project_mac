@@ -1,3 +1,5 @@
+Project made by: Samantha Gonzales, Tom Steinman, and Seth Emery
+
 # cs303_project_mac
 
 The build- file is a .zip file that when unzipped has the mac executable file to run the program.
