@@ -21,7 +21,7 @@ public:
     ~webHistory();
 
 private slots:
-    // slots named on_foo_bar are error prone?
+    // buttons for add/remove/sort etc are declared
     void on_pushButton_clicked();
     void on_pushButton_2_clicked();
 
