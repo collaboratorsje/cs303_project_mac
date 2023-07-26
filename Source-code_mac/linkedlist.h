@@ -9,12 +9,12 @@
 #include "website.h"
 
 using namespace std;
-
+// creates the node made from a website object and a pointer to the next node
 struct Node {
     Website data;
     Node *nextPtr;
 };
-
+// defines the linkedlist with private data member the headptr and some merge sort helper functions and merge sort functions
 class LinkedList {
 private:
     Node *headPtr;
@@ -30,6 +30,7 @@ private:
     Node* mergeSortByName(Node* head);
 
 public:
+    // declares the linked list class functions
     LinkedList();
     LinkedList(Node *headPtr);
     void addElement(Website);
