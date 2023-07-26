@@ -1,5 +1,5 @@
 #include "linkedlist.h"
-
+// constructors for empty list and for a list with one node
 LinkedList::LinkedList() { headPtr = nullptr; }
 
 LinkedList::LinkedList(Node *headPtr) { this->headPtr = headPtr; }
@@ -42,7 +42,7 @@ void LinkedList::delElement() {
         return;
     }
 }
-
+// prints the linked list if it isn't empty and prints a message if it is
 void LinkedList::printList() {
     Node *tempPtr = headPtr;
     if (tempPtr == nullptr) {
@@ -53,7 +53,7 @@ void LinkedList::printList() {
         tempPtr = tempPtr->nextPtr;
     }
 }
-
+// returns bool true if the list is empty
 bool LinkedList::listIsEmpty() {
     if (headPtr == nullptr) {
         return true;
@@ -61,7 +61,7 @@ bool LinkedList::listIsEmpty() {
         return false;
     }
 }
-
+// while loops the list and deletes the nodes to clear the list
 void LinkedList::clearList() {
     Node *delNode = headPtr;
     Node *next;
@@ -75,6 +75,7 @@ void LinkedList::clearList() {
 }
 
 // Merge Sort Helper Function
+// recursive helper function uses sortByDate function to compare website objects and then calls mergeSortedLists until left/right are empty
 Node *LinkedList::mergeSortedLists(Node *left, Node *right) {
     if (!left)
         return right;
@@ -141,7 +142,7 @@ Node* LinkedList::mergeSortByName(Node* head) {
 
     return mergeSortedListsByName(left, right);
 }
-
+// Identical recursive helper function but uses the sortByName function from the website class
 Node* LinkedList::mergeSortedListsByName(Node* left, Node* right) {
     if (!left)
         return right;
@@ -158,7 +159,7 @@ Node* LinkedList::mergeSortedListsByName(Node* left, Node* right) {
     }
     return result;
 }
-
+// Creates a new linkedlist and then uses a hash map to start adding the nodes of the list to the new list
 LinkedList *LinkedList::archiveList() {
     Node *temp = headPtr; // initializes temp pointer
     Node *newNode = nullptr;
@@ -177,7 +178,7 @@ LinkedList *LinkedList::archiveList() {
         temp = temp->nextPtr;
     }
 
-    return new LinkedList(hashMap[headPtr]); // returned coppied list
+    return new LinkedList(hashMap[headPtr]); // returned copied list
 }
 
 void LinkedList::exportList() {
