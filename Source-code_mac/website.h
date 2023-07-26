@@ -7,6 +7,7 @@
 #include <string>
 #include <QString>
 
+// Create website class and private data members
 class Website {
 private:
     std::string name;
@@ -16,6 +17,7 @@ private:
     int minute;
     int second;
 
+// Declare the functions of the class like constructors and setters and getters plus two sort functions and a compare function
 public:
     Website();
     Website(const std::string &websiteName, int year, int month, int day,
